@@ -8,7 +8,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>mq</artifactId>
     <packaging>war</packaging>
-    <name>mq Maven Webapp</name>
+    <name>mq</name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>

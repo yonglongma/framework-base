@@ -8,7 +8,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>socket</artifactId>
     <packaging>war</packaging>
-    <name>socket Maven Webapp</name>
+    <name>socket</name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
