@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>leaflet demo</title>
+    <meta charset="UTF-8">
+    <!--leaf引入-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <!--点聚合插件-->
+    <link rel="stylesheet" href="resources/markCluster/MarkerCluster.css" />
+    <link rel="stylesheet" href="resources/markCluster/MarkerCluster.Default.css" />
+    <script src="resources/markCluster/leaflet.markercluster-src.js"></script>
+    <!--jquery以及bootstrap-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--自定义js,css-->
+    <link rel="stylesheet" href="resources/screen.css">
+    <script src="resources/data.js"></script>
+</head>
+<body>
+<div id="map" style="width:85%; height:600px"></div>
+<div class="input-group search_div" style="position: absolute">
+    <div id="searchInput">
+        <input type="text" class="form-control" placeholder="请输入地点" id="tipinput" oninput="">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+    </div>
+</div>
+
+<script>
+    var myMap = L.map('map').setView([39.970096, 116.31267], 14);
+    L.tileLayer('http://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
+        attribution: '&copy; 高德地图',
+        maxZoom: 18,
+        minZoom: 9,
+        subdomains: "1234"
+    }).addTo(myMap);
+
+    var markers = L.markerClusterGroup();
+    for (var i = 0; i < dataList.length; i++) {
+        var data = dataList[i];
+        var contentInfo = "<div><div>"+data.name+"</div><div>"+data.description+"</div></div>";
+        var marker = L.marker(new L.LatLng(data.latitude, data.longitude), {icon:L.icon({iconUrl: data.icon})});
+        marker.bindPopup(contentInfo);
+        markers.addLayer(marker);
+    }
+    myMap.addLayer(markers);
+
+    //圆
+    var circle = L.circle([39.967, 116.321464], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: 100
+    }).addTo(myMap);
+    //多边形
+    var polygon = L.polygon([
+        [39.972657, 116.306744],
+        [39.973825, 116.318352],
+        [39.968579, 116.320348],
+        [39.966753, 116.30992],
+        [39.968398, 116.30949],
+        [39.96825, 116.307345]
+    ]).addTo(myMap);
+
+    circle.bindPopup("人民大学地铁站");
+    polygon.bindPopup("人民大学校园111111");
+
+    function onMapClick(e) {
+        alert("你点击位置是：" + e.latlng);
+    }
+    myMap.on('click', onMapClick);
+
+</script>
+</body>
+</html>

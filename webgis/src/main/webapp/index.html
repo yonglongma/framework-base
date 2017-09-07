@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>leaflet demo</title>
+    <meta charset="UTF-8">
+    <!--leaf引入-->
+    <!--<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>-->
+    <link rel="stylesheet" href="resources/leaflet/leaflet.css" />
+    <script src="resources/leaflet/leaflet.js"></script>
+
+    <!--热力图插件-->
+    <script src="resources/heatmap/heatmap.js"></script>
+    <script src="resources/heatmap/leaflet-heatmap.js"></script>
+    <!--点聚合插件-->
+    <link rel="stylesheet" href="resources/markCluster/MarkerCluster.css" />
+    <link rel="stylesheet" href="resources/markCluster/MarkerCluster.Default.css" />
+    <script src="resources/markCluster/leaflet.markercluster-src.js"></script>
+    <!--jquery以及bootstrap-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--自定义js,css-->
+    <link rel="stylesheet" href="resources/screen.css">
+    <script src="resources/data.js"></script>
+</head>
+<body>
+    <div id="map" style="width:85%; height:600px"></div>
+    <script>
+        var latlngs = [];
+        var myMap = L.map('map').setView([31.182,121.657], 14);
+
+        L.tileLayer.wms("http://180.168.198.218:12303/geoserver/sh/wms", {
+            layers: 'sh:sh_map',
+            format: 'image/png',
+            transparent: true
+        }).addTo(myMap);
+        var markers = L.markerClusterGroup();
+
+        for (var i = 0; i < dataList.length; i++) {
+            var data = dataList[i];
+            var latlng = [data.latitude, data.longitude];
+            var contentInfo = "<div><div>"+data.name+"</div><div>"+data.description+"</div></div>";
+            var marker = L.marker(new L.LatLng(data.latitude, data.longitude), {icon:L.icon({iconUrl: data.icon})});
+            var popup = L.popup({maxWidth:600,minWidth:275,closeButton:false,className:'map-popup'}).setContent(contentInfo);
+            marker.bindPopup(popup);
+            //点标记被点击事件
+            marker.on('click', function(e) {
+                myMap.setView([e.latlng.lat,e.latlng.lng],myMap.getZoom());
+            });
+            markers.addLayer(marker);
+            latlngs.push(latlng);
+        }
+        myMap.fitBounds(latlngs);
+        //添加聚合点标记
+        myMap.addLayer(markers);
+        //点击聚合中心显现
+        markers.on('clusterclick', function (a) {
+            a.layer.zoomToBounds({padding: [20, 20]});
+        });
+
+        //点标记
+        L.marker([31.182,121.657]).addTo(myMap)
+            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+            .openPopup();
+
+        function onMapClick(e) {
+            alert("你点击位置是：" + e.latlng);
+        }
+        myMap.on('click', onMapClick);
+
+        /*点击地图元素定位，并打开popup*/
+        /*L.popup({maxWidth:600,minWidth:275,closeButton:false,className:'map-popup'}).setLatLng([data.latitude, data.longitude])
+            .setContent(contentInfo)
+            .addTo(myMap);
+        myMap.setView([data.latitude, data.longitude],myMap.getZoom());*/
+
+    </script>
+</body>
+</html>
