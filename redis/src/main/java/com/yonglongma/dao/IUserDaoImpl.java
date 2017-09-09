@@ -1,6 +1,6 @@
 package com.yonglongma.dao;
 
-import com.yonglongma.domain.User;
+import com.yonglongma.entity.User;
 import java.util.List;
 
 /**

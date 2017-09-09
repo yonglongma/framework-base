@@ -1,4 +1,4 @@
-package com.yonglongma.domain;
+package com.yonglongma.entity;
 
 import java.io.Serializable;
 
