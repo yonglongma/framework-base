@@ -45,8 +45,10 @@
         </property>
     </bean>
 
-    <!-- redis缓存管理器 -->
-    <!--RedisCacheManager 做为 redis 统一的调度和管理者-->
+    <!-- 开启spring cache注解功能-->
+    <cache:annotation-driven cache-manager="cacheManager" />
+
+    <!--spring cache缓存管理器，RedisCacheManager 做为 redis 统一的调度和管理者-->
     <bean id="cacheManager" class="org.springframework.data.redis.cache.RedisCacheManager">
         <constructor-arg name="redisOperations" ref="redisTemplate" />
         <!-- 是否事务提交，如果事务回滚，缓存也回滚，默认false -->
@@ -59,8 +61,5 @@
             </map>
         </property>
     </bean>
-
-    <!-- 支持缓存注解 -->
-    <cache:annotation-driven cache-manager="cacheManager" />
 
 </beans>

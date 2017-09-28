@@ -14,7 +14,7 @@ import java.util.Map;
  * Create in 19:34 2017/9/9
  * Description
  */
-public class TestJedis {
+public class TestBaseJedis {
 
     private Jedis jedis;
 
