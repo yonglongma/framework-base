@@ -1,15 +1,15 @@
 /**
- * <p>Title: UserDao.java</p>
+ * <p>Title: BaseEntity.java</p>
  * <p>Copyright: Copyright (c) 2017 - </p>
  */
-package com.yonglongma.dao;
+package com.yonglongma.common.entity;
 
 /**
  * @author MaYongLong
- * @date 2017-09-28 17:15
+ * @date 2017-09-29 0:26
  * -------------------------------------------------------------------------
  * Modified Date		Modified By			Why & What's modified
  * -------------------------------------------------------------------------
  */
-public interface UserDao {
+public class BaseEntity {
 }

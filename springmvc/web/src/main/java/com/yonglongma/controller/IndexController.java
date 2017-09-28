@@ -2,9 +2,11 @@
  * <p>Title: IndexController.java</p>
  * <p>Copyright: Copyright (c) 2017 - </p>
  */
-package com.yonglongma.base.controller;
+package com.yonglongma.controller;
 
-import java.io.IOException;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @author MaYongLong
@@ -14,17 +16,15 @@ import java.io.IOException;
  * -------------------------------------------------------------------------
  */
 @Controller
-@RequestMapping(value = "")
+@RequestMapping(value = "/")
 public class IndexController extends BaseController {
 
     /**
-     * Success
-     * @param response
-     * @throws IOException
+     * 测试
      */
-    @RequestMapping(value = "")
+    @RequestMapping(value = "/test")
     @ResponseBody
-    public void hello(HttpServletResponse response) throws IOException {
+    public void hello() {
         logger.debug("DEBUG TEST 这个地方输出DEBUG级别的日志");
         logger.info("INFO test 这个地方输出INFO级别的日志");
         logger.error("ERROR test 这个地方输出ERROR级别的日志");

@@ -1,17 +1,17 @@
 /**
- * <p>Title: User.java</p>
+ * <p>Title: UserExt.java</p>
  * <p>Copyright: Copyright (c) 2017 - </p>
  */
-package com.yonglongma.entity;
+package com.yonglongma.dto;
 
-import com.yonglongma.base.BaseEntity;
+
 
 /**
  * @author MaYongLong
- * @date 2017-09-28 17:15
+ * @date 2017-09-29 0:28
  * -------------------------------------------------------------------------
  * Modified Date		Modified By			Why & What's modified
  * -------------------------------------------------------------------------
  */
-public class User extends BaseEntity{
+public class UserExt{
 }

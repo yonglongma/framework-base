@@ -17,6 +17,12 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <!--其他模块引入-->
+        <dependency>
+            <groupId>com.yonglongma</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>web</finalName>
