@@ -4,7 +4,7 @@
  */
 package com.yonglongma.dto;
 
-import com.yonglongma.common.model.SysUser;
+import com.yonglongma.web.model.SysUser;
 
 /**
  * @author MaYongLong

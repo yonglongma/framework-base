@@ -2,7 +2,7 @@
  * <p>Title: UserService.java</p>
  * <p>Copyright: Copyright (c) 2017 - </p>
  */
-package com.yonglongma.service;
+package com.yonglongma.web.service;
 
 import com.yonglongma.web.model.SysUser;
 import java.util.List;

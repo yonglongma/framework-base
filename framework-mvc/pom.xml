@@ -6,15 +6,14 @@
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>framework-springmvc</artifactId>
-    <packaging>war</packaging>
-    <name>framework-springmvc</name>
+    <artifactId>framework-mvc</artifactId>
+    <packaging>pom</packaging>
+    <name>framework-mvc Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <modules>
-        <module>web</module>
-        <module>common</module>
+        <module>common-x</module>
+        <module>web-x</module>
     </modules>
-
     <properties>
         <junit.version>4.8.2</junit.version>
         <spring.version>4.0.2.RELEASE</spring.version>
@@ -176,6 +175,6 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>framework-springmvc</finalName>
+        <finalName>framework-mvc</finalName>
     </build>
 </project>

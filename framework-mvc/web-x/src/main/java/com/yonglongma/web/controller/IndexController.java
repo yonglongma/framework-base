@@ -2,10 +2,10 @@
  * <p>Title: IndexController.java</p>
  * <p>Copyright: Copyright (c) 2017 - </p>
  */
-package com.yonglongma.controller;
+package com.yonglongma.web.controller;
 
 import com.yonglongma.web.model.SysUser;
-import com.yonglongma.service.UserService;
+import com.yonglongma.web.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

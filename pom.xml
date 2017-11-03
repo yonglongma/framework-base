@@ -6,14 +6,11 @@
 
   <name>framework-base</name>
   <modules>
-    <module>redis</module>
-    <module>socket</module>
-    <module>springmvc</module>
-    <module>lucene</module>
-    <module>mq</module>
-    <module>webgis</module>
-    <module>dubbo</module>
-    <module>shiro</module>
+    <module>framework-mq</module>
+    <module>framework-dubbo</module>
+    <module>framework-socket</module>
+    <module>framework-gis</module>
+    <module>framework-mvc</module>
   </modules>
   <groupId>com.yonglongma</groupId>
   <artifactId>framework-base</artifactId>

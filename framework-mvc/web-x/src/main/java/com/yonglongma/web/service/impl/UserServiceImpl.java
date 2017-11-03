@@ -2,11 +2,11 @@
  * <p>Title: UserServiceImpl.java</p>
  * <p>Copyright: Copyright (c) 2017 - </p>
  */
-package com.yonglongma.service.impl;
+package com.yonglongma.web.service.impl;
 
 import com.yonglongma.web.dao.SysUserMapper;
 import com.yonglongma.web.model.SysUser;
-import com.yonglongma.service.UserService;
+import com.yonglongma.web.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
