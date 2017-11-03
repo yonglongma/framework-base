@@ -16,7 +16,7 @@
     </modules>
 
     <properties>
-        <junit.version>4.11</junit.version>
+        <junit.version>4.8.2</junit.version>
         <spring.version>4.0.2.RELEASE</spring.version>
         <mybatis.version>3.2.6</mybatis.version>
         <slf4j.version>1.6.0</slf4j.version>
@@ -121,25 +121,21 @@
             <version>1.2</version>
         </dependency>
 
-        <!-- 日志文件管理包 -->
+        <!-- logback日志文件管理包 -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
-            <type>jar</type>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
             <version>${logback.version}</version>
-            <type>jar</type>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
-            <type>jar</type>
         </dependency>
         <!-- 格式化对象，方便输出日志 -->
         <dependency>

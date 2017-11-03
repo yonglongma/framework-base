@@ -13,13 +13,43 @@ package com.yonglongma.common.entity;
  */
 public class User extends BaseEntity {
 
-    private String name;
+    private Long userId;
 
-    public String getName() {
-        return name;
+    private String userName;
+
+    private String mobile;
+
+    private String password;
+
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

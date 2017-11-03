@@ -8,11 +8,9 @@ import com.yonglongma.common.entity.User;
 import com.yonglongma.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-
 import java.util.List;
 
 /**
@@ -33,10 +31,12 @@ public class IndexController extends BaseController {
      * 测试
      */
     @RequestMapping(value = "/test")
-    public void hello() {
+    public ModelAndView hello() {
         logger.debug("DEBUG TEST 这个地方输出DEBUG级别的日志");
         logger.info("INFO test 这个地方输出INFO级别的日志");
         logger.error("ERROR test 这个地方输出ERROR级别的日志");
+        String me = "Hello World, Spring 3.0!";
+        return new ModelAndView("user","message",me);
     }
 
     @RequestMapping(value = "/list")
