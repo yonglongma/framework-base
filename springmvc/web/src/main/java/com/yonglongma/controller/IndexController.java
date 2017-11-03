@@ -4,7 +4,7 @@
  */
 package com.yonglongma.controller;
 
-import com.yonglongma.common.entity.User;
+import com.yonglongma.common.model.SysUser;
 import com.yonglongma.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -43,7 +43,7 @@ public class IndexController extends BaseController {
     @ResponseBody
     public ModelAndView findUser(){
         ModelAndView modelAndView = new ModelAndView();
-        List<User> users = userService.findUser();
+        List<SysUser> users = userService.findUser();
         modelAndView.addObject("userList",users);
         modelAndView.setViewName("user");
         return modelAndView;

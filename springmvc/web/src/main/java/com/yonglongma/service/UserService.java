@@ -4,7 +4,7 @@
  */
 package com.yonglongma.service;
 
-import com.yonglongma.common.entity.User;
+import com.yonglongma.common.model.SysUser;
 import java.util.List;
 
 /**
@@ -16,8 +16,8 @@ import java.util.List;
  */
 public interface UserService {
 
-    void addUser(User user);
+    void createUser(SysUser user);
 
-    List<User> findUser();
+    List<SysUser> findUser();
 
 }

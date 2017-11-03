@@ -4,7 +4,7 @@
  */
 package com.yonglongma.dto;
 
-import com.yonglongma.common.entity.User;
+import com.yonglongma.common.model.SysUser;
 
 /**
  * @author MaYongLong
@@ -13,5 +13,5 @@ import com.yonglongma.common.entity.User;
  * Modified Date		Modified By			Why & What's modified
  * -------------------------------------------------------------------------
  */
-public class UserExt extends User {
+public class UserExt extends SysUser {
 }
