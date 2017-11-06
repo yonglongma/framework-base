@@ -10,7 +10,7 @@
     <module>framework-dubbo</module>
     <module>framework-socket</module>
     <module>framework-gis</module>
-    <module>framework-mvc</module>
+    <module>framework-springmvc-ssm</module>
   </modules>
   <groupId>com.yonglongma</groupId>
   <artifactId>framework-base</artifactId>
