@@ -9,8 +9,8 @@
     <module>framework-mq</module>
     <module>framework-dubbo</module>
     <module>framework-socket</module>
-    <module>framework-gis</module>
-    <module>framework-springmvc-ssm</module>
+    <module>springboot-cloud</module>
+    <module>spring-springmvc</module>
   </modules>
   <groupId>com.yonglongma</groupId>
   <artifactId>framework-base</artifactId>
