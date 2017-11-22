@@ -21,7 +21,7 @@ import java.util.Date;
  * -------------------------------------------------------------------------
  */
 @Controller
-@RequestMapping(value = "/")
+@RequestMapping(value = "/a")
 public class LoginController {
     @Autowired
     private UserService userService;

@@ -9,7 +9,7 @@
             <font color="red"><c:out value="${error}" /></font>
         </c:if>
         <%--c：url在url前自动加上应用部署根目录--%>
-        <form action="<c:url value='/loginCheck.html' />" method="post">
+        <form action="<c:url value='/a/loginCheck.html' />" method="post">
             用户名：<input type="text" name="userName">
             <br>
             密码：<input type="password" name="password">
