@@ -2,12 +2,12 @@
  * <p>Title: UserService.java</p>
  * <p>Copyright: Copyright (c) 2017 - </p>
  */
-package com.yonglongma.sample.service;
+package com.yonglongma.service;
 
-import com.yonglongma.sample.dao.LoginLogDao;
-import com.yonglongma.sample.dao.UserDao;
-import com.yonglongma.sample.domain.LoginLog;
-import com.yonglongma.sample.domain.User;
+import com.yonglongma.dao.LoginLogDao;
+import com.yonglongma.dao.UserDao;
+import com.yonglongma.domain.LoginLog;
+import com.yonglongma.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -2,7 +2,7 @@
  * <p>Title: LoginCommand.java</p>
  * <p>Copyright: Copyright (c) 2017 - </p>
  */
-package com.yonglongma.sample.web;
+package com.yonglongma.web;
 
 /**
  * @author MaYongLong

@@ -2,12 +2,11 @@
  * <p>Title: LoginController.java</p>
  * <p>Copyright: Copyright (c) 2017 - </p>
  */
-package com.yonglongma.sample.web;
+package com.yonglongma.web;
 
-import com.yonglongma.sample.domain.User;
-import com.yonglongma.sample.service.UserService;
+import com.yonglongma.domain.User;
+import com.yonglongma.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -22,7 +21,6 @@ import java.util.Date;
  * -------------------------------------------------------------------------
  */
 @RestController//springmvc提供用于创建rest服务
-@EnableAutoConfiguration//boot提供用于对spring框架进行自动配置
 public class LoginController {
 
     @Autowired

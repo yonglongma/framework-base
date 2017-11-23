@@ -2,7 +2,7 @@
  * <p>Title: User.java</p>
  * <p>Copyright: Copyright (c) 2017 - </p>
  */
-package com.yonglongma.sample.domain;
+package com.yonglongma.domain;
 
 import java.io.Serializable;
 import java.util.Date;

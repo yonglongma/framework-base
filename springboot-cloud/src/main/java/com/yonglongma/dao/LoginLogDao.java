@@ -2,9 +2,9 @@
  * <p>Title: LoginLogDao.java</p>
  * <p>Copyright: Copyright (c) 2017 - </p>
  */
-package com.yonglongma.sample.dao;
+package com.yonglongma.dao;
 
-import com.yonglongma.sample.domain.LoginLog;
+import com.yonglongma.domain.LoginLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
