@@ -41,6 +41,11 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
             <version>${springboot.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId><!--提供监控功能-->
+            <version>${springboot.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>mysql</groupId>
