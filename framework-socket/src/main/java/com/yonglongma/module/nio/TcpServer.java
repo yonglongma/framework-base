@@ -2,7 +2,7 @@
  * <p>Title: Server.java</p>
  * <p>Copyright: Copyright (c) 2017 - </p>
  */
-package com.yonglongma.module.nio.tcp;
+package com.yonglongma.module.nio;
 
 import com.yonglongma.module.utils.Constants;
 import java.io.IOException;
@@ -20,7 +20,7 @@ import java.util.Set;
  * Modified Date		Modified By			Why & What's modified
  * -------------------------------------------------------------------------
  */
-public class Server {
+public class TcpServer {
 
     public static void main(String[] args) {
         try {
@@ -76,7 +76,7 @@ public class Server {
                     String message = stringBuilder.toString();
                     System.out.println("Message from client: " + message);
                     if (Constants.CLIENT_CLOSE.equalsIgnoreCase(message.toString().trim())) {
-                        System.out.println("Client is going to shutdown!");
+                        System.out.println("TcpClient is going to shutdown!");
                         socketChannel.close();
                     } else if (Constants.SERVER_CLOSE.equalsIgnoreCase(message.trim())) {
                         System.out.println("Server is going to shutdown!");

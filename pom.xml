@@ -10,7 +10,6 @@
     <module>framework-dubbo</module>
     <module>framework-socket</module>
     <module>springboot-cloud</module>
-    <module>framework-spring</module>
   </modules>
   <groupId>com.yonglongma</groupId>
   <artifactId>framework-base</artifactId>

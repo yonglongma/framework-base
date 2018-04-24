@@ -1,5 +1,5 @@
 /**
- * <p>Title: Client.java</p>
+ * <p>Title: TcpClient.java</p>
  * <p>Copyright: Copyright (c) 2017 - </p>
  */
 package com.yonglongma.module.socket.tcp.multiThread;

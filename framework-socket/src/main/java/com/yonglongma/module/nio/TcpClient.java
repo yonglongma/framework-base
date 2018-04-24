@@ -1,8 +1,8 @@
 /**
- * <p>Title: Client.java</p>
+ * <p>Title: TcpClient.java</p>
  * <p>Copyright: Copyright (c) 2017 - </p>
  */
-package com.yonglongma.module.nio.tcp;
+package com.yonglongma.module.nio;
 
 import com.yonglongma.module.utils.Constants;
 
@@ -22,7 +22,7 @@ import java.util.Scanner;
  * Modified Date		Modified By			Why & What's modified
  * -------------------------------------------------------------------------
  */
-public class Client {
+public class TcpClient {
 
     public static void main(String[] args) {
         try {
